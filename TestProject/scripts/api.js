@@ -113,7 +113,7 @@ define(['jquery'], function($) {
     }
 
     var api_version = "";
-    var base_url = "http://localhost:9999";
+    var base_url = "http://localhost:8070";
 
     var getPubApiUrl = function() {
         return base_url + api_version;

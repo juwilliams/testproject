@@ -4,22 +4,7 @@ require.config({
         'jquery': 'vendor/jquery',
 
         /* Foundation */
-        'foundation.core': 'foundation/foundation',
-        'foundation.abide': 'foundation/foundation.abide',
-        'foundation.accordion': 'foundation/foundation.accordion',
-        'foundation.alert': 'foundation/foundation.alert',
-        'foundation.clearing': 'foundation/foundation.clearing',
-        'foundation.dropdown': 'foundation/foundation.dropdown',
-        'foundation.equalizer': 'foundation/foundation.equalizer',
-        'foundation.interchange': 'foundation/foundation.interchange',
-        'foundation.joyride': 'foundation/foundation.joyride',
-        'foundation.magellan': 'foundation/foundation.magellan',
-        'foundation.offcanvas': 'foundation/foundation.offcanvas',
-        'foundation.orbit': 'foundation/foundation.orbit',
-        'foundation.reveal': 'foundation/foundation.reveal',
-        'foundation.tab': 'foundation/foundation.tab',
-        'foundation.tooltip': 'foundation/foundation.tooltip',
-        'foundation.topbar': 'foundation/foundation.topbar',
+        'foundation': 'vendor/foundation',
 
         /* Vendor Scripts */
         'jquery.cookie': 'vendor/jquery.cookie',
@@ -29,105 +14,29 @@ require.config({
         'knockout': 'vendor/knockout',
 
         /* Models */
-        'tree-viewmodel': 'models/tree-viewmodel'
+        'tree-viewmodel': 'models/tree-viewmodel',
+
+        /* Personal */
+        'qparser': 'qparser'
     },
     shim: {
-        /* Foundation */
-        'foundation.core': {
+        "foundation": {
             deps: [
-            'jquery',
-            'modernizr'
+                'jquery'
             ],
             exports: 'Foundation'
         },
-        'foundation.abide': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.accordion': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.alert': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.clearing': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.dropdown': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.equalizer': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.interchange': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.joyride': {
-            deps: [
-            'foundation.core',
-            'foundation.cookie'
-            ]
-        },
-        'foundation.magellan': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.offcanvas': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.orbit': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.reveal': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.tab': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.tooltip': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-        'foundation.topbar': {
-            deps: [
-            'foundation.core'
-            ]
-        },
-
         /* Vendor Scripts */
         'jquery.cookie': {
             deps: [
-            'jquery'
+                'jquery'
             ]
         },
         'fastclick': {
             exports: 'FastClick'
         },
         'knockout': {
-        	exports: 'Knockout'
+            exports: 'Knockout'
         },
         'modernizr': {
             exports: 'Modernizr'
@@ -140,9 +49,8 @@ require.config({
 require([
     'jquery',
     'app',
-    'foundation.interchange',
-    'foundation.tooltip'
-], function ($, app) {
+    'foundation'
+], function($, app) {
     $(document).foundation();
 
     app.init();

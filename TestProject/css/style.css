@@ -1,10 +1,17 @@
+.interface_contents {
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
 .interface_contents-folder span,
 .interface_contents-file span {
 	margin-left: 10px;
 }
+.interface_contents-folders,
+.interface_contents-files {
+	margin-left: 0px !important;
+}
 .interface_contents-folder:hover,
-.interface_contents-file:hover,
-.interface_contents-breadcrumb:hover {
+.interface_contents-file:hover {
 	background: #eee;
 	padding: 4px;
 	cursor: pointer;
@@ -12,7 +19,14 @@
 .interface_contents-breadcrumb {
 	cursor: pointer;
 	color: #00F;
+	text-decoration: underline;
 }
 .interface_contents-breadcrumb:hover {
 	
+}
+.interface_contents-folder .fa {
+	color: #f2da49;
+}
+.interface_contents-file .fa {
+	color: #999;
 }

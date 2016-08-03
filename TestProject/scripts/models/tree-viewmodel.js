@@ -31,6 +31,16 @@ define(['knockout'], function(ko) {
         self.adjustBreadcrumbs = function(target_crumb) {
             self.breadcrumbs().splice(self.breadcrumbs().indexOf(target_crumb) + 1, self.breadcrumbs().length - (self.breadcrumbs.indexOf(target_crumb)) + 1);
         }
+        self.generateBreadcrumbs = function(path) {
+        	var crumbs = path.split('\\');
+        	var generated_crumbs = [];
+
+        	for (var n in crumbs) {
+        		generated_crumbs.push(crumbs[n] + '\\');
+        	}
+
+        	self.breadcrumbs(generated_crumbs);
+        }
         self.addFolder = function(dir) {
             self.folders.push(dir);
         }

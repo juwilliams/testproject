@@ -41,7 +41,8 @@ namespace TestProject.Controllers
             return Json(response, JsonRequestBehavior.AllowGet);
         }
 
-        //public HttpResponse Upload(string path)
+        //  something like this...
+        //public HttpResponse AddFile(string path)
         //{
         //    if (string.IsNullOrEmpty(path))
         //    {
@@ -60,6 +61,11 @@ namespace TestProject.Controllers
         //        }
         //    }
         //}
+
+        public byte[] GetFile(string path)
+        {
+            return null;
+        }
 
         #endregion
 

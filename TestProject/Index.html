@@ -2,28 +2,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
     <title></title>
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/bower_components/foundation/css/foundation.min.css">
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="interface" class="row">      
-        <div id="interface_contents" class="columns">
-        	<div class="row" data-bind="foreach: breadcrumbs">
-    			<span class="interface_contents-breadcrumb" data-bind="text: $data"></span>
-        	</div>
-        	<div class="row" data-bind="foreach: folders">
-        		<div class="interface_contents-folder row"><i class="fa fa-folder"></i><span data-bind="text: $data"></span></div>
-        	</div>
-        	<div class="row" data-bind="foreach: files">
-        		<div class="interface_contents-file row"><i class="fa fa-file"></i><span data-bind="text: $data"></span></div>
-        	</div>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <h4>Test Project</h4>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <li>
+                    <input type="search" placeholder="Search">
+                </li>
+                <li>
+                    <button type="button" class="button">Search</button>
+                </li>
+            </ul>
         </div>
     </div>
-    <div id="actions" class="row">
-        <div id="actions_buttons" class="columns"></div>
+    <div class="interface_contents row">
+        <div class="row">        	
+            <div data-bind="foreach: breadcrumbs">
+                <span class="interface_contents-breadcrumb" data-bind="text: $data"></span>
+            </div>
+        </div>
+        <div class="row interface_contents-folders" data-bind="foreach: folders">
+            <div class="interface_contents-folder row"><i class="fa fa-folder"></i><span class="interface_contents-folder-name" data-bind="text: name"></span><span class="pull-right" data-bind="text: size"></span></div>
+        </div>
+        <div class="row interface_contents-files" data-bind="foreach: files">
+            <div class="interface_contents-file row"><i class="fa fa-file"></i><span class="interface_contents-file-name" data-bind="text: name"></span><span class="float-right" data-bind="text: size"></span></div>
+        </div>
+        <div id="actions" class="row">
+            <div id="actions_buttons" class="columns"></div>
+        </div>
     </div>
     <script data-main="scripts/main.js" src="scripts/require.js"></script>
 </body>
