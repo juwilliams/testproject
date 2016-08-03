@@ -50,5 +50,12 @@ require([
 ], function($, app) {
     $(document).foundation();
 
+    $('body').bind('api_busy', function(e){
+        $('.loader').show();
+    });
+    $('body').bind('api_done', function(e){
+        $('.loader').hide();
+    })
+
     app.init();
 });

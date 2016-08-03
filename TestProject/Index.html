@@ -18,6 +18,12 @@
         <div class="top-bar-right">
             <ul class="menu">
                 <li>
+                    <form enctype="multipart/form-data" action="/upload/image" method="post">
+                        <label for="exampleFileUpload" class="button">Upload File</label>
+                        <input type="file" id="exampleFileUpload" class="menu_file show-for-sr">
+                    </form>
+                </li>
+                <li>
                     <input type="search" placeholder="Search">
                 </li>
                 <li>
@@ -26,6 +32,7 @@
             </ul>
         </div>
     </div>
+    <div class="loader"><img src="images/loader.gif" alt="loading"></div>
     <div class="interface_contents row">
         <div class="row">        	
             <div data-bind="foreach: breadcrumbs">

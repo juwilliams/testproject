@@ -15,6 +15,7 @@ namespace TestProject.Controllers
         const string _format_item_and_size = "{0}|{1}";
         const string _format_filesize = "{0:0.##} {1}";
 
+
         #region Endpoint Behavior
 
         public ActionResult Contents(string path)

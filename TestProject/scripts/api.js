@@ -105,7 +105,11 @@ define(['jquery'], function($) {
     };
 
     var SendRequest = function(req) {
+        $('body').trigger('api_busy');
+
         $.ajax(req).always(function() {
+            $('body').trigger('api_done');
+
             if (typeof req.always === 'function') {
                 req.always();
             }
