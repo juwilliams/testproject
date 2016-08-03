@@ -1,0 +1,18 @@
+.interface_contents-folder span,
+.interface_contents-file span {
+	margin-left: 10px;
+}
+.interface_contents-folder:hover,
+.interface_contents-file:hover,
+.interface_contents-breadcrumb:hover {
+	background: #eee;
+	padding: 4px;
+	cursor: pointer;
+}
+.interface_contents-breadcrumb {
+	cursor: pointer;
+	color: #00F;
+}
+.interface_contents-breadcrumb:hover {
+	
+}

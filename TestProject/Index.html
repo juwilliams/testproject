@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/bower_components/foundation/css/foundation.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="interface" class="row">      
+        <div id="interface_contents" class="columns">
+        	<div class="row" data-bind="foreach: breadcrumbs">
+    			<span class="interface_contents-breadcrumb" data-bind="text: $data"></span>
+        	</div>
+        	<div class="row" data-bind="foreach: folders">
+        		<div class="interface_contents-folder row"><i class="fa fa-folder"></i><span data-bind="text: $data"></span></div>
+        	</div>
+        	<div class="row" data-bind="foreach: files">
+        		<div class="interface_contents-file row"><i class="fa fa-file"></i><span data-bind="text: $data"></span></div>
+        	</div>
+        </div>
+    </div>
+    <div id="actions" class="row">
+        <div id="actions_buttons" class="columns"></div>
+    </div>
+    <script data-main="scripts/main.js" src="scripts/require.js"></script>
+</body>
+
+</html>

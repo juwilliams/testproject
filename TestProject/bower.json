@@ -1,0 +1,22 @@
+{
+  "name": "TestProject",
+  "description": "",
+  "main": "",
+  "authors": [
+    "justin williams (justin.williams@rpdmsolutions.com)"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "^5.5.3",
+    "requirejs": "^2.2.0",
+    "knockout": "knockout.js#^3.1.0"
+  }
+}
