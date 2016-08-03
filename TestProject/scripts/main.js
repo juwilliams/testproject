@@ -6,11 +6,8 @@ require.config({
         /* Foundation */
         'foundation': 'vendor/foundation',
 
-        /* Vendor Scripts */
-        'jquery.cookie': 'vendor/jquery.cookie',
-        'fastclick': 'vendor/fastclick',
-        'modernizr': 'vendor/modernizr',
-        'placeholder': 'vendor/placeholder',
+        /* Vendor Scripts */        
+        'what-input': 'vendor/what-input',
         'knockout': 'vendor/knockout',
 
         /* Models */
